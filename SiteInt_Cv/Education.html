@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Stylesheet.css">
+    <script src="Translation.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <title>Education</title>
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item ">
+                        <a href="Page_principal.html"><button class="Options" id="Home">Home</button></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Experience.html"><button class="Options" id="Experience">Work Experience</button></a>
+                    </li>
+                    <li class="nav-item" active>
+                        <a href="Skills.html"><button class="Options" id="Skills">Skills</button></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Projects.html"><button class="Options" id="Projects">Projects</button></a>
+                    </li>
+                    <li>
+                        <a href="Education.html"><button class="Options" id="Education">Education</button></a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <a class="navbar-brand" id="name" href="#">Aléanne Camiré</a>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><select id="language-select">
+                    <!-- Remember to do double languages-->
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                </select></li>
+            </ul>
+        </div>
+
+    </nav>
+</header>
+<body>
+    <div id="EducationDiv">
+        <div id="Udem">
+            <image class="ImageEdu" src="images/Udem.png"></image>
+            <h3 id="BacUdem">Bachelor in Computer Science</h3>
+            <p>Université de Montréal</p>
+            <p id="DateUdem">Fall 2022 to Winter 2025</p>
+        </div>
+        <div id="Comptia">
+            <image class="ImageEdu" src="images/Comptia.png"></image>
+            <h3>CompTIA Security+</h3>
+            <p>2023</p>
+            <a id="Certificate"href="images/certificate.pdf">Here is my certificate of training</a>
+        </div>
+        <div id="Cegep">
+            <image class="ImageEdu" src="images/CegepSherbrooke.png"></image>
+            <h3 id="DecSh">DEC in Science, Mathematic and Computer Science</h3>
+            <p>Cegep de Sherbrooke</p>
+            <p id="DateCegep">Fall 2020 to Summer 2022</p>
+
+        </div>
+
+
+    </div>
+</body>
+</html>
