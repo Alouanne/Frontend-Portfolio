@@ -7,6 +7,9 @@ float: right;
     border: none;
     font-size: 20px;
 }
+#introPage{
+    margin: 25px;
+}
 #nav navbar-nav navbar-right{
 float:right;
 }
