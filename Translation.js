@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById('Education').textContent = 'Éducation';
                //page principal
                if(document.getElementById('intro') != null){
-                document.getElementById('intro').textContent = 'Aléanne Camiré';
-                document.getElementById('Introduction').textContent = "Bonjour, je suis une deuxième année qui étudie en informatique à l'Université de Montréal (UdeM). J'adore l'informatique, et j'ai commencé à apprendre il y a plus d'une décennie. Mes gros projets, par contre, ont commencé en 2022 quand j'ai créé un jeu vidéo, avec l'aide de mes amis. J'ai une longue histoire avec la programmation. Ma première langue a été Java, mais grâce à l'école, j'ai appris le c++, haskell, python et bien sûr, HTML. Je suis très motivé, et toujours prêt à apprendre. Je suis aussi extrêmement persévérante. J'espère que vous aimerez mes projets :).";
+                document.getElementById('intro').textContent = 'Bonjour, je suis Aléanne Camiré';
+                document.getElementById('Introduction').textContent = "Je suis une deuxième année qui étudie en informatique à l'Université de Montréal (UdeM). J'adore l'informatique, et j'ai commencé à apprendre il y a plus d'une décennie. Mes gros projets, par contre, ont commencé en 2022 quand j'ai créé un jeu vidéo, avec l'aide de mes amis. J'ai une longue histoire avec la programmation. Ma première langue a été Java, mais grâce à l'école, j'ai appris le C++, Haskell, Python et bien sûr, HTML. Je suis très motivé, et toujours prêt à apprendre. Je suis aussi extrêmement persévérante. J'espère que vous aimerez mes projets.";
                 }
             //Projects
                 if(document.getElementById('docsOmega') != null){
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if(document.getElementById('skillintro') != null){
                 document.getElementById('skillintro').textContent = 'Voici mes compétences';
                 document.getElementById('ProgSkills').textContent = 'Languages de Programation';
-                document.getElementById('Spoken').textContent = 'Languages Parler';
+                document.getElementById('Spoken').textContent = 'Langues parlées';
                 document.getElementById('Spoen').textContent = 'Anglais';
                 document.getElementById('Spofr').textContent = 'Français';
                 }
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById('BacUdem').textContent = 'Baccalauréat en informatique';
                 document.getElementById('DateUdem').textContent = 'Automne 2022 à Hiver 2025';
                 document.getElementById('Certificate').textContent = 'Voici mon certificat';
-                document.getElementById('DecSh').textContent = 'Dec en Sciences, Informatiques et Mathématiques';
+                document.getElementById('DecSh').textContent = 'DEC en Sciences, informatiques et mathématiques';
                 document.getElementById('DateCegep').textContent = 'Automne 2020 à Été 2022';
                 }
                 //Experience
@@ -70,27 +70,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 //Projects
                 if(document.getElementById('Omega1') != null){
-                document.getElementById('Omega1').textContent = 'Jeux vidéo crée pour un appareil android sur android studio';
-                document.getElementById('Omega2').textContent = "Conception et réalisation d'une interface pour jouer au jeu de cartes ainsi qu'aux cartes elles-mêmes.";
+                document.getElementById('Omega1').textContent = 'Jeux vidéo de cartes créé pour un appareil android sur android studio';
+                document.getElementById('Omega2').textContent = "Conception et réalisation d'une interface pour jouer au jeu, ainsi que la création des cartes.";
                 document.getElementById('Omega3').textContent = "Travailler avec une équipe pour développer et maintenir les mécanismes de jeu et l'équilibre du jeu";
                 document.getElementById('Omega4').textContent = 'Utiliser Java pour créer une IA pour jouer contre le joueur';
-                document.getElementById('Omega5').textContent = 'Conceptualiser et créer les assets de jeu';
+                document.getElementById('Omega5').textContent = 'Conceptualiser et créer les «assets» de jeu';
                 document.getElementById('name1').textContent = 'Site Web de vente';
-                document.getElementById('shop1').textContent = 'Créer avec Html, CSS, Javascript, Ajax et XML';
+                document.getElementById('shop1').textContent = 'Créer avec HTML, CSS, Javascript, Ajax et XML';
                 document.getElementById('shop2').textContent = 'Conceptualiser un échantillon de site pour les achats en ligne';
-                document.getElementById('shop3').textContent = 'Ajouter des characteristiques comme des filtres, des listes de produits dynamique et un panier';
+                document.getElementById('shop3').textContent = 'Ajouter des fonctions comme des filtres, des listes de produits dynamiques et un panier';
                 document.getElementById('name2').textContent = 'Système de gestion de robot';
                 document.getElementById('Robo1').textContent = 'Créer avec Java et Swing';
-                document.getElementById('Robo2').textContent = "Prototypage de l'application ainsi que la version final";
-                document.getElementById('Robo3').textContent = "Robotix est une application de gesion de robot qui donnele control au clients sur leur robot, ainsi qu'un acces direct au fournisseur";
+                document.getElementById('Robo2').textContent = "Prototypage de l'application ainsi que la version finale";
+                document.getElementById('Robo3').textContent = "Robotix est une application de gestion de robot qui donne le contrôle aux clients de leur robot, ainsi qu'un accès direct au fournisseur des pièces";
                 document.getElementById('Task1').textContent = 'Créer avec HTML, CSS, Javascript, PHP et SQL';
-                document.getElementById('Task2').textContent = "Créer un task manager qui utilise des databases pour sauvegarder l'informaion";
-                document.getElementById('Task3').textContent = 'Créer un compte pour créer des taches et changer les catégorie associer au taches';
+                document.getElementById('Task2').textContent = "Créer un gestionnaire de tâches qui utilise des bases de données pour sauvegarder l'information";
+                document.getElementById('Task3').textContent = 'Créer un compte pour créer des tâches et changer les catégories associer aux tâches';
                 document.getElementById('name3').textContent = 'Jeu Clicker';
                 document.getElementById('click1').textContent = 'Créer avec Java';
-                document.getElementById('click2').textContent = "Conception d'un jeu de clicker avec la possibilité de cliquer, de compter le temps, d'acheter des mises à niveau";
+                document.getElementById('click2').textContent = "Conception d'un jeu de clicker avec la possibilité de cliquer, de compter le temps, d'acheter des «upgrades»";
                 document.getElementById('mine1').textContent = 'Créer avec C++';
-                document.getElementById('mine2').textContent = 'Recréer minesweeper avec QT Creator';
+                document.getElementById('mine2').textContent = 'Recréer Minesweeper avec QT Creator';
                 }
 
                // document.getElementById('').textContent = '';
@@ -105,8 +105,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById('Education').textContent = 'Education';
                 //Projet Principal
                 if(document.getElementById('intro') != null){
-                document.getElementById('intro').textContent = 'Aleanne Camire';
-                document.getElementById('Introduction').textContent = 'Hi, Im a second year university student currently studying at the University of Montreal (UdeM) in computer science. I love computer science and have been doing small projects for over a decade. But my big projects didnt start until 2022, where i would make an entire video game, with the help of somme friends. \n I have a long history of coding. My first language was Java, but given my experiences with school, i have had to work with c++, haskell, python and of course HTML. I am someone who is motivated, and always ready to learn. I am also very perseverent. I hope you like the projects that i have made over the years :)';
+                document.getElementById('intro').textContent = "Hi, I am Aléanne Camiré";
+                document.getElementById('Introduction').textContent = 'I’m a second-year university student currently studying at the University of Montreal (UdeM) in computer science. I love computer science and have been doing small projects for over a decade. But my big projects didn’t start until 2022, where I would make an entire video game, with the help of some friends. \n I have a long history of coding. My first language was Java, but given my experiences with school, I have had to work with C++, Haskell, Pythons and, of course, HTML. I am someone who is motivated, and always ready to learn. I am also very perseverant. I hope you like the projects that I have made over the years.';
                 }
                 //Projet
                 if(document.getElementById('docsOmega') != null){

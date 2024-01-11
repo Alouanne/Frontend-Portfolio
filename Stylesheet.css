@@ -10,6 +10,9 @@ float: right;
 #introPage{
     margin: 25px;
 }
+#intro{
+    color: darkslateblue;
+}
 #nav navbar-nav navbar-right{
 float:right;
 }
@@ -28,6 +31,7 @@ header {
 }
 body{
     padding-top:90px;
+    size:12px;
 }
 .imageLogo{
    width: auto;
@@ -45,6 +49,15 @@ float:left;
    float:left;
    padding-right:5px;
 }
+#Explain{
+    font-size: 1px;
+}
+a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
 .ImageGit{
 max-width:100%;
   margin: auto;
