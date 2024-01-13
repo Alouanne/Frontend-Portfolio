@@ -52,7 +52,7 @@ float:left;
 #Explain{
     font-size: 1px;
 }
-a:link {
+a:link, a:visited {
     color: black;
     background-color: transparent;
     text-decoration: none;
@@ -66,9 +66,7 @@ max-width:100%;
 .info{
     padding: 2px;
 }
-a{
-  text-decoration: none;
-}
+
 
 #name{
  font-family: "Lucida Console", cursive;
@@ -117,4 +115,8 @@ ul {
 .Skills{
     font-size: 20px;
 
+}
+#CegepWIm .imageText{
+    display:table-cell;
+    text-align:center;
 }
