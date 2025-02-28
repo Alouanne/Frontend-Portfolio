@@ -1,122 +1,125 @@
 #language-select{
-float: right;
-}
-.Options{
-    background-color: transparent;
-    outline: none;
-    border: none;
-    font-size: 20px;
-}
-#introPage{
-    margin: 25px;
-}
-#intro{
-    color: darkslateblue;
-}
-#nav navbar-nav navbar-right{
-float:right;
-}
-header {
-    width: 100%;
-    height: 25px;
-    background-color: #e0e0eb;
-    padding-top: 5px;
-    padding-bottom : 5px;
-    margin-bottom: 5px;
-    position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 99;
-
-}
-body{
-    padding-top:90px;
-    size:12px;
-}
-.imageLogo{
-   width: auto;
-   height: 20px;
-   float:left;
-   padding-right:5px;
-}
-.imageJava, #imageHTML{
-height: 90px;
-float:left;
-}
-.ImageEdu{
-   width: auto;
-   height: 110px;
-   float:left;
-   padding-right:5px;
-}
-#Explain{
-    font-size: 1px;
-}
-a:link, a:visited {
-    color: black;
-    background-color: transparent;
-    text-decoration: none;
-}
-
-.ImageGit{
-max-width:100%;
-  margin: auto;
-}
-
-.info{
-    padding: 2px;
-}
-
-
-#name{
- font-family: "Lucida Console", cursive;
- font-size: 24px;
-}
-#Project{
-  display: grid;
-  grid-template-columns: 50% 50%;
+  float: right;
+  }
+  .Options{
+      background-color: transparent;
+      outline: none;
+      border: none;
+      font-size: 20px;
+  }
+  #nav navbar-nav navbar-right{
+  float:right;
+  }
+  header {
+      width: 100%;
+      height: 25px;
+      background-color: #e0e0eb;
+      padding-top: 5px;
+      padding-bottom : 5px;
+      margin-bottom: 5px;
+      position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
+  
+  }
+  body{
+      padding-top:90px;
+  }
+  
+  .InfoCenter{
+      text-align:left;
+  }
+  .imageLogo{
+     width: auto;
+     height: 20px;
+     padding-right:5px;
+  }
+  .imageJava, #imageHTML{
+  height: 90px;
+  float:left;
+  }
+  .ImageEdu{
+     width: auto;
+     height: 110px;
+     float:left;
+     padding-right:5px;
+  }
+  .ImageGit{
+  max-width:100%;
     margin: auto;
-  text-align: center;
-  width: 50%;
-}
-#Omega_Power, #Shopping_Website, #RobotsManagement, #ClickerGame, #Minesweaper, #Taskmanager{
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  #name{
+   font-family: "Lucida Console", cursive;
+   font-size: 24px;
+  }
+  #Omega_Power, #Shopping_Website, #RobotsManagement, #ClickerGame, #Minesweaper, #Taskmanager{
+      margin-bottom: 4px;
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 15px;
+  
+  }
+  .HomePage{
+      width: 75%;
+      margin: auto;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      text-align:center;
+  }
+  #intro{
+      width:100%;
+  }
+  #Introduction{
+      text-align:justify;
+      width: 100%;
+  }
+  #SkillDiv, #Udem, #Comptia, #Cegep{
+   margin: auto;
+    width: 50%;
+    border: 3px solid black;
+    padding: 10px;
     margin-bottom: 4px;
-  border: 3px solid black;
-  padding: 10px;
-
-}
-#SkillDiv, #Udem, #Comptia, #Cegep{
- margin: auto;
-  width: 50%;
-  border: 3px solid black;
-  padding: 10px;
-  margin-bottom: 4px;
-  text-align:center;
-}
-#Iga, #Mikes{
- margin: auto;
-  width: 50%;
-  border: 3px solid black;
-  padding: 10px;
-  margin-bottom: 4px;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  font-size: 22px;
-  padding: 0;
-}
-#BakeryTasks, #DishwasherTask{
-  list-style-type:disc ;
-  margin: 10px;
-  font-size: 12px;
-
-}
-.Skills{
-    font-size: 20px;
-
-}
-#CegepWIm .imageText{
-    display:table-cell;
     text-align:center;
-}
+  }
+  .jobs{
+   margin: auto;
+    width: 50%;
+    border: 3px solid black;
+    padding: 10px;
+    margin-bottom: 4px;
+  }
+  .symbolWord{
+      display:flex;
+  }
+  #Project{
+   margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+    margin-bottom: 6px;
+  
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    font-size: 22px;
+    padding: 0;
+  }
+  .tasks{
+    list-style-type:disc ;
+    margin: 10px;
+    font-size: 12px;
+  
+  }
+  .Skills{
+      font-size: 20px;
+  
+  }
