@@ -4,7 +4,7 @@ const access_token = null;
 const playlistDefault = "3Pft9VkD2PXIK9EPOlVo9Z?si=0cdd96fdf68e4821";
 let playlistId = playlistDefault;
 let playlistData = null;
-const redirectUri = "http://localhost:63342/alouanne.github.io/OnlineHitster/Hitster.html"
+const redirectUri = "https://alouanne.github.io/OnlineHitster/Hitster.html"
 let pickedTracks = null;
 let overallPoints = 0;
 function allowDrop(event) {
@@ -118,7 +118,7 @@ function checkResults(){
     const checkButton = document.getElementById("checkButton");
     checkButton.style.display = "none";
 
-    localStorage.setItem('points', currentPoints);
+    sessionStorage.setItem('points', currentPoints);
 
 }
 
@@ -298,9 +298,8 @@ window.onload = () => {
     const params = new URLSearchParams(hash);
     accessToken = params.get('access_token');
   }
-  overallPoints = parseInt(localStorage.getItem('points')) || 0;
+  overallPoints = parseInt(sessionStorage .getItem('points')) || 0;
   getSongs();
-
 };
 
 function toggleInput() {
