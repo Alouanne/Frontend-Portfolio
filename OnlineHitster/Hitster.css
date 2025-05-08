@@ -1,0 +1,93 @@
+
+#cardBase, .cardsResponse{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+}
+.cards{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.card, .movableCard {
+  width: 100px;
+  height: 160px;
+  display: flex; /* Fix 1: Enable flex layout */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+textarea {
+  width: 90%; /* Make it fit inside the card */
+  resize: none;
+  font-size: 10px;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+
+.spotifyPicture{
+    max-width: 80%;
+    max-height: 80%;
+}
+.card{
+    min-width = 10px;
+    min-height = 10px;
+    border: 2px dashed #ccc;
+}
+#stockingList{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#cardBase{
+  min-height: 50px;
+  min-width: 100%;
+}
+.cardResponse{
+    border-style: solid;
+    justify-content: center;
+    display: flex;
+    min-height: 160px;
+    min-width: 100px;
+    width: 100%;
+    height: 100px;
+}
+#checkButton, resetButton{
+   justify-content: center;
+}
+
+
+.cardAnswer {
+  width: 120px;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+  background: #f5f7fa;
+  border: 2px solid #cbd5e1;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.cardAnswer:hover {
+  background: #e2e8f0;
+  transform: translateY(-4px);
+}
+
+.cardAnswer h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+  text-align: center;
+}

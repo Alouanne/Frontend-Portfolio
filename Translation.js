@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
              //page principal
              if(document.getElementById('intro') != null){
               document.getElementById('intro').textContent = 'Aléanne Camiré';
-              document.getElementById('Introduction').textContent = "Bonjour, je suis une deuxième année qui étudie en informatique à l'Université de Montréal (UdeM). J'adore l'informatique, et j'ai commencé à apprendre il y a plus d'une décennie. Mes gros projets, par contre, ont commencé en 2022 quand j'ai créé un jeu vidéo, avec l'aide de mes amis. J'ai une longue histoire avec la programmation. Ma première langue a été Java, mais grâce à l'école, j'ai appris le c++, haskell, python et bien sûr, HTML. Je suis très motivé, et toujours prêt à apprendre. Je suis aussi extrêmement persévérante. J'espère que vous aimerez mes projets :).";
+              document.getElementById('Introduction').textContent = "Bonjour, je suis une nouvelle graduée. J'étudiait en informatique à l'Université de Montréal (UdeM). J'adore l'informatique, et j'ai commencé à apprendre il y a plus d'une décennie. Mes gros projets, par contre, ont commencé en 2022 quand j'ai créé un jeu vidéo, avec l'aide de mes amis. J'ai une longue histoire avec la programmation. Ma première langue a été Java, mais grâce à l'école, j'ai appris le c++, haskell, python et bien sûr, HTML. Je suis très motivé, et toujours prêt à apprendre. Je suis aussi extrêmement persévérante. J'espère que vous aimerez mes projets :).";
               }
           //Projects
               if(document.getElementById('docsOmega') != null){
@@ -76,6 +76,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
               //Projects
               if(document.getElementById('Omega1') != null){
+              document.getElementById('Hitster1').textContent = 'Version en ligne de variant du jeux Hitster';
+              document.getElementById('Hitster2').textContent = 'Utiliser un RESTful API de la part de Spotify pour aller chercher les playlists et pour partir les chansons';
+              document.getElementById('Hitster3').textContent = 'Implementer authentification de Spotify ';
               document.getElementById('Omega1').textContent = 'Jeux vidéo crée pour un appareil android sur android studio';
               document.getElementById('Omega2').textContent = "Conception et réalisation d'une interface pour jouer au jeu de cartes ainsi qu'aux cartes elles-mêmes.";
               document.getElementById('Omega3').textContent = "Travailler avec une équipe pour développer et maintenir les mécanismes de jeu et l'équilibre du jeu";
@@ -112,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
               //Projet Principal
               if(document.getElementById('intro') != null){
               document.getElementById('intro').textContent = 'Aleanne Camire';
-              document.getElementById('Introduction').textContent = 'Hi, Im a second year university student currently studying at the University of Montreal (UdeM) in computer science. I love computer science and have been doing small projects for over a decade. But my big projects didnt start until 2022, where i would make an entire video game, with the help of somme friends. \n I have a long history of coding. My first language was Java, but given my experiences with school, i have had to work with c++, haskell, python and of course HTML. I am someone who is motivated, and always ready to learn. I am also very perseverent. I hope you like the projects that i have made over the years :)';
+              document.getElementById('Introduction').textContent = 'Hi, Im a new grad. I recently finished studying at the University of Montreal (UdeM) in computer science. I love computer science and have been doing small projects for over a decade. But my big projects didnt start until 2022, where i would make an entire video game, with the help of somme friends. \n I have a long history of coding. My first language was Java, but given my experiences with school, i have had to work with c++, haskell, python and of course HTML. I am someone who is motivated, and always ready to learn. I am also very perseverent. I hope you like the projects that i have made over the years :)';
               }
               //Projet
               if(document.getElementById('docsOmega') != null){
@@ -160,6 +163,9 @@ document.addEventListener("DOMContentLoaded", function () {
               }
 
               if(document.getElementById('Omega_Power') != null){
+							document.getElementById('Hitster1').textContent = 'Online version of an alterante variante of the game Hitster';
+							document.getElementById('Hitster2').textContent = 'Used RESTful API from Spotify to get Playlists and start songs';
+							document.getElementById('Hitster3').textContent = "Implemented Spotify's authentification token";
               document.getElementById('Omega1').textContent = 'Video game made for android phones on android studio.';
               document.getElementById('Omega2').textContent = "Designed and made an interface to play the card game as well as the cards themselves.";
               document.getElementById('Omega3').textContent = "Worked with a team to develop and maintain game mechanics, and game balance.";

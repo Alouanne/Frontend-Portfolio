@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Hitster.css">
+    <script src="OnlineHitster.js"></script>
+    <meta charset="UTF-8">
+    <title>Hitster</title>
+    <div class="cardPossible" id="stockingList">
+        <div class="cards" id="cardBase">
+            <div class="card" id="card1"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="movableCard" id="cardMove1" draggable="true" ondragstart="drag(event)">
+                    <img src="../images/spotify_blue.png" id="cardImg1" alt="Avatar" class="spotifyPicture" onclick="playSong(event)">
+                    <input type="hidden" id="inputCard1" name="inputCards">
+                    <input type="hidden" id="inputYear1" name="inputYears">
+                    <textarea rows="4" placeholder="Take notes here"></textarea>
+                </div>
+            </div>
+            <div class="card" id="card2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="movableCard" id="cardMove2" draggable="true" ondragstart="drag(event)">
+                    <img src="../images/spotify_purple.png" id="cardImg2" alt="Avatar" class="spotifyPicture" onclick="playSong(event)">
+                    <input type="hidden" id="inputCard2" name="inputCards">
+                    <input type="hidden" id="inputYear2" name="inputYears">
+                    <textarea rows="4" placeholder="Take notes here"></textarea>
+                </div>
+            </div>
+            <div class="card" id="card3"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="movableCard" id="cardMove3" draggable="true" ondragstart="drag(event)">
+                    <img src="../images/spotify_red.png" id="cardImg3" alt="Avatar" class="spotifyPicture" onclick="playSong(event)">
+                    <input type="hidden" id="inputCard3" name="inputCards">
+                    <input type="hidden" id="inputYear3" name="inputYears">
+                    <textarea rows="4" placeholder="Take notes here"></textarea>
+                </div>
+            </div>
+            <div class="card" id="card4"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="movableCard" id="cardMove4" draggable="true" ondragstart="drag(event)">
+                    <img src="../images/spotify_orange.png" id="cardImg4" alt="Avatar" class="spotifyPicture" onclick="playSong(event)">
+                    <input type="hidden" id="inputCard4" name="inputCards">
+                    <input type="hidden" id="inputYear4" name="inputYears">
+                    <textarea rows="4" placeholder="Take notes here"></textarea>
+                </div>
+            </div>
+            <div class="card" id="card5"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="movableCard" id="cardMove5" draggable="true" ondragstart="drag(event)">
+                    <img src="../images/spotify_yellow.png" id="cardImg5" alt="Avatar" class="spotifyPicture" onclick="playSong(event)">
+                    <input type="hidden" id="inputCard5" name="inputCards">
+                    <input type="hidden" id="inputYear5" name="inputYears">
+                    <textarea rows="4" placeholder="Take notes here"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="cardsResponse">
+            <div class="cardResponse" id="cardResponse1"  ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+            <div class="cardResponse" id="cardResponse2"  ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+            <div class="cardResponse" id="cardResponse3"  ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+            <div class="cardResponse" id="cardResponse4"  ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+            <div class="cardResponse" id="cardResponse5"  ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+        </div>
+        <div class="cardsResponse" id="answerContainer" style="display: none;">
+            <div class="cardAnswer" id="AnswerCard1">
+                <h2 id="AnswerYear1" ></h2>
+            </div>
+            <div class="cardAnswer" id="AnswerCard2">
+                <h2 id="AnswerYear2"></h2>
+            </div>
+            <div class="cardAnswer" id="AnswerCard3">
+                <h2 id="AnswerYear3" ></h2>
+            </div>
+            <div class="cardAnswer" id="AnswerCard4">
+                <h2 id="AnswerYear4"></h2>
+            </div>
+            <div class="cardAnswer" id="AnswerCard5">
+                <h2 id="AnswerYear5" ></h2>
+            </div>
+        </div>
+        <h1 id="points"></h1>
+        <h2 id="overallPoints"></h2>
+        <button id="resetButton" style="display: none;" onclick="resetRound()"> Continue </button>
+        <button id="checkButton" disabled onclick="checkResults()"> Check</button>
+        <img src="../images/Arrow.png" alt="Arrow representing earliest (left) to latest (right)">
+    </div>
+</head>
+<body>
+
+</body>
+</html>
