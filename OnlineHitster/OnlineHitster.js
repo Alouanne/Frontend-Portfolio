@@ -1,12 +1,11 @@
-const clientId = "f7d7f367f0734f7780e76ee7f3ca4f4a";
-const clientSecret = "a80b875d48ed41d7b78095144c25a119";
 const access_token = null;
-const playlistDefault = "3Pft9VkD2PXIK9EPOlVo9Z?si=0cdd96fdf68e4821";
+const playlistDefault = "7HlMVnK4JxBo1TElKjfPP2?pt_success=1";
 let playlistId = playlistDefault;
 let playlistData = null;
 const redirectUri = "https://alouanne.github.io/OnlineHitster/Hitster.html"
 let pickedTracks = null;
 let overallPoints = 0;
+const backendUrl = "http://localhost:8080/auth/spotify";
 function allowDrop(event) {
     event.preventDefault();
 }
@@ -41,7 +40,6 @@ function drop(event) {
 
     const yearInput = draggedElement.querySelector('input[name="inputYears"]');
     const year = yearInput?.value;
-    console.log(year);
     const number = dropZone.id.match(/\d+/)?.[0];
     const yearDisplay = document.getElementById(`AnswerYear${number}`);
 
@@ -145,16 +143,11 @@ function check(){
 
 }
 
-function loginWithSpotify() {
-  checkPlaylistId();
-  const state = encodeURIComponent(JSON.stringify({ playlistId }));
-  const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&redirect_uri=${encodeURIComponent(redirectUri)}&scope=user-read-playback-state user-modify-playback-state playlist-read-private streaming&state=${state}`;
 
-  window.location.href = authUrl;
-}
 function getPlaylistIdFromState() {
-  const params = new URLSearchParams(window.location.hash.substring(1));
+  const params = new URLSearchParams(window.location.search);
   const state = params.get('state');
+
   if (state) {
     try {
       const parsed = JSON.parse(decodeURIComponent(state));
@@ -166,69 +159,50 @@ function getPlaylistIdFromState() {
   return null;
 }
 async function getPlaylist() {
-    if (playlistData != null) {
-    return playlistData;
+    if (!playlistId || !accessToken) {
+        alert("Playlist ID and Access Token are required.");
+        return;
     }
 
-    if (!accessToken) {
-    alert('You must log in first.');
-    return;
-    }
+    const baseUrl = "http://localhost:8080/getPlaylist";
+    const url = `${baseUrl}?playlistId=${encodeURIComponent(getPlaylistIdFromState())}&accessToken=${encodeURIComponent(accessToken)}`;
 
-    const playID = getPlaylistIdFromState();
-    let allTracks = [];
-    let offset = 0;
-    let limit = 100;
-    let total = 0;
-    let next = `https://api.spotify.com/v1/playlists/${playID}/tracks?offset=${offset}&limit=${limit}`;
-    const response = await fetch(next, {
-      headers: {
-        Authorization: `Bearer ${accessToken}`
-      }
-    });
+    try {
+        const response = await fetch(url);
 
-    const data = await response.json();
-    if (data != null) {
-      data.tracks.items.forEach(track => {
-          allTracks.push(track);
-      });
-      next = data.tracks.next;
-      }
-  try {
-    do {
-      const response = await fetch(next, {
-        headers: {
-          Authorization: `Bearer ${accessToken}`
+        if (!response.ok) {
+            // Try to extract error message from response body if possible
+            let errorMessage = `Server error: ${response.status}`;
+            try {
+            	if(response.status == 500){
+            		alert("No playlist found under that id. Please try again")
+            	  window.location.href = "HitsterStart.html";
+            	}else{
+                const errorData = await response.json();
+                if (errorData && errorData.message) {
+                    errorMessage += ` - ${errorData.message}`;
+                }
+                window.location.href = "HitsterStart.html";
+                }
+            } catch (jsonErr) {
+                // Ignore if response is not JSON
+            }
         }
-      });
 
-      const data = await response.json();
-      if (data != null) {
-        data.items.forEach(track => {
-            allTracks.push(track);
-        });
-        next = data.next;
-      } else {
-        break;
-      }
+        const playlistData = await response.json();
+        return playlistData;
 
-    } while (next != null);
-
-    playlistData = allTracks;
-    return playlistData;
-
-  } catch (error) {
-    console.error("Failed to fetch playlist:", error);
-  }
+    } catch (error) {
+        console.error("Failed to fetch playlist:", error);
+    }
 }
+
 
 async function getSongs() {
 	let playlist = await getPlaylist();
 	if (!playlist || playlist.length === 0) {
-		alert("No tracks found in playlist.");
 		return;
 	}
-	console.log(playlist);
 	let uniqueIndexes = getUniqueRandomIndexes(playlist.length, 5);
 	console.log(uniqueIndexes)
 	pickedTracks = uniqueIndexes.map((index, i) => {
@@ -248,7 +222,6 @@ async function getSongs() {
 	});
 
 	console.log("Selected songs (in order):");
-	console.log(pickedTracks);
 	pickedTracks.forEach(track => {
 		const input = document.getElementById(`inputCard${track.number}`);
 		const year = document.getElementById(`inputYear${track.number}`);
@@ -261,6 +234,7 @@ async function getSongs() {
 		}
 		console.log(`${track.number}. ${track.name} - ${track.artist} (Released: ${track.releaseDate})`);
 	});
+	  document.querySelector(".loadingScreen").style.display = 'none';
 };
 function getUniqueRandomIndexes(max, count) {
   let indexes = new Set();
@@ -293,26 +267,9 @@ async function playSong(event){
   });
 }
 window.onload = () => {
-  if (window.location.hash) {
-    const hash = window.location.hash.substring(1);
-    const params = new URLSearchParams(hash);
-    accessToken = params.get('access_token');
-  }
+  const params = new URLSearchParams(window.location.search);
+	getPlaylistIdFromState();
+  accessToken = params.get('access_token');
   overallPoints = parseInt(sessionStorage .getItem('points')) || 0;
   getSongs();
 };
-
-function toggleInput() {
-  const option2 = document.querySelector('input[name="option"][value="option2"]');
-  const input = document.getElementById('textInput');
-  input.disabled = !option2.checked;
-}
-function checkPlaylistId(){
-  const option2 = document.querySelector('input[name="option"][value="option2"]');
-  const input = document.getElementById('textInput');
-  if(option2.checked){
-    playlistId = input.value;
-  }else{
-    playlistId = playlistDefault;
-  }
-}

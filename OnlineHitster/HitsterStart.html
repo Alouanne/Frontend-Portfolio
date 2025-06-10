@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-  <script src="OnlineHitster.js"></script>
+  <script src="HitsterStart.js"></script>
   <link rel="stylesheet" href="../Stylesheet.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -70,7 +70,7 @@
             Unique Playlist
             <span class="tooltip-container">
               <span class="tooltip-icon">i</span>
-              <span class="tooltip-text">To find the playlist Id, go to the chosen playlist. Click on (...), and then on share, and then on copy link to playlist. Everything after playlist/ is the id.</span>
+              <span class="tooltip-text">To find the playlist Id, go to the chosen playlist. Click on (...), and then on share, and then on copy link to playlist.</span>
             </span>
           </label>
 
@@ -78,7 +78,14 @@
         </div>
 
       </div>
-      <button  type="button" id="startLogin" onclick="loginWithSpotify()">Start Game</button>
+      <button  type="button" id="startLogin" onclick="startGame()">Start Game</button>
+    </form>
+  </div>
+
+  <div class="UniquePlaylistWarning">
+    <form id="UniqueWarning">
+      <h2>Warning. If you play with a unique playlist, please make sure that there are no remasters on the playlist. Remasters have the wrong date associated, and as result will be given the wrong date in the game <br> <br> Thank you for your understanding</h2>
+      <button  type="button" id="startUnique" onclick="loginWithSpotify()">Start Game</button>
     </form>
   </div>
 </body>

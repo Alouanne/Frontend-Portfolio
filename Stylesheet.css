@@ -124,7 +124,7 @@ header {
   
   }
 
-.HitsterStart {
+.HitsterStart, .UniquePlaylistWarning{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #f0f2f5;
     min-height: calc(100vh - 90px);
@@ -136,7 +136,7 @@ header {
     padding: 2rem;
 }
 
-  #startGame {
+  #startGame{
     background: #ffffff;
     padding: 2rem;
     border-radius: 12px;
@@ -145,6 +145,16 @@ header {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+  }
+  #UniqueWarning{
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 600px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
   }
 
   .radio-group {
@@ -178,7 +188,7 @@ header {
     border-radius: 6px;
   }
 
-  #startLogin {
+  #startLogin, #startUnique {
     background-color: #007bff;
     color: white;
     padding: 0.75rem;
@@ -191,13 +201,27 @@ header {
     box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
   }
 
-  #startLogin:hover {
+  #startLogin:hover, #startUnique:hover {
     background-color: #0056b3;
   }
   .tooltip-container {
     position: relative;
     display: inline-block;
   }
+.UniquePlaylistWarning {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: black;
+}
 
   .tooltip-icon {
     background-color: grey;
@@ -238,7 +262,7 @@ header {
   }
 
   .tooltip-text::after {
-    content: "";
+    content: "";#
     position: absolute;
     top: 100%;
     left: 50%;
