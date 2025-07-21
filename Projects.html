@@ -2,115 +2,157 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="Stylesheet.css">
-  <script src="Translation.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Projects</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-  <title>Project</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="Stylesheet.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+
+  <!-- JavaScript -->
+  <script src="Translation.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
 </head>
-<header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item ">
-            <a href="index.html"><button class="Options" id="Home">Home</button></a>
-          </li>
-          <li class="nav-item">
-            <a href="Experience.html"><button class="Options" id="Experience">Work Experience</button></a>
-          </li>
-          <li class="nav-item" active>
-            <a href="Skills.html"><button class="Options" id="Skills">Skills</button></a>
-          </li>
-          <li class="nav-item">
-            <a href="Projects.html"><button class="Options" id="Projects">Projects</button></a>
-          </li>
-          <li>
-            <a href="Education.html"><button class="Options" id="Education">Education</button></a>
-          </li>
-
-        </ul>
-
-      </div>
-      <a class="navbar-brand" id="name" href="#">Aléanne Camiré</a>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li><select id="language-select">
-          <!-- Remember to do double languages-->
-          <option value="en">English</option>
-          <option value="fr">Français</option>
-        </select></li>
-      </ul>
-    </div>
-
-  </nav>
-</header>
 <body>
 
-  <div id="Project">
-    <div id="Hitster" class="projects">
-      <image id="imageHTML" src="images/html.png"></image>
-      <a href="OnlineHitster/HitsterStart.html"><h1 id="name7">Hitster</h1></a>
-      <h3>05/05/2025 - 08/05/2025</h3>
-      <p id="Hitster1">Online version of an alterante variante of the game Hitster</p>
-      <p id="Hitster2">Used RESTful API from Spotify to get Playlists and start songs</p>
-      <p id="Hitster3">Implemented Spotify's authentification token</p>
-    </div>
-    <div id="Omega_Power" class="projects">
-      <image class="imageJava" src="images/java.png"></image>
-      <h1 id="name4">Omega Power </h1>
-      <h3>01/02/2022 - 14/05/2022 </h3>
-      <!--ADD TRANSLATION -->
-      <p id="Omega1">Video game made for android phones on android studio.</p>
-      <p id="Omega2">Designed and made an interface to play the card game as well as the cards themselves.</p>
-      <p id="Omega3">Worked with a team to develop and maintain game mechanics, and game balance.</p>
-      <p id="Omega4">Used Java to create an AI to play the games against the player</p>
-      <p id="Omega5">Create and design game assets</p>
-    </div>
-    <div id="Shopping_Website" class="projects">
-      <image id="imageHTML" src="images/html.png"></image>
-      <h1 id="name1">Shopping Website</h1>
-      <h3>01/09/2022 - 31/12/2022 </h3>
-      <p id="shop1">Created using HTML, CSS, Javascript, Ajax and XML</p>
-      <p id="shop2">Designed a sample shopping website for online shopping</p>
-      <p id="shop3">Added featurers like filters, dynamic product lists and a shopping bag</p>
-    </div>
-    <div id="RobotsManagement" class="projects">
-      <image class="imageJava" src="images/java.png"></image>
-      <h1 id="name2">Robot Management System </h1>
-      <h3>01/05/2022 - 31/08/2022 </h3>
-      <p id="Robo1">Created using Java and Swing</p>
-      <p id="Robo2">Prototyping and final version of a robot management application</p>
-      <p id="Robo3">Robotix is a robot management application which gives control to clients of their robots, as well as having direct acces to suppliers </p>
-    </div>
-    <div id="Taskmanager" class="projects">
-      <image class="imageJava" src="images/html.png"></image>
-      <h1 id="name5">Task Manager</h1>
-      <h3>01/05/2022 - 31/08/2022 </h3>
-      <p id="Task1">Created using HTML, CSS, Javascrip, PHP and SQL</p>
-      <p id="Task2">Create a task manager that uses databases to save the information.</p>
-      <p id="Task3">Create a account to create task, and alter what category they are in</p>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand font-weight-bold" id="name" href="#">Aléanne Camiré</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html" id="Home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="Experience.html" id="Experience">Work Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="Skills.html" id="Skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link active" href="Projects.html" id="Projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="Education.html" id="Education">Education</a></li>
+      </ul>
+
+      <select id="language-select" class="form-control w-auto ml-auto">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+      </select>
     </div>
-    <div id="ClickerGame" class="projects">
-      <image class="imageJava" src="images/java.png"></image>
-      <h1 id="name3">Clicker Game </h1>
-      <h3>20/11/2021 - 20/12/2021 </h3>
-      <p id="click1">Created using Java</p>
-      <p id="click2">Designed a clicker game with the ability to click, count time, buy upgrades</p>
+  </div>
+</nav>
+
+<!-- Projects Section -->
+<main class="container mt-5 pt-5">
+  <div class="row">
+
+    <!-- Project Card Template -->
+    <!-- Repeat this block per project -->
+    <div class="col-md-6 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-2">
+            <img src="images/html.png" alt="HTML Icon" class="mr-2" style="height: 24px;">
+            <h5 class="card-title mb-0"><a href="OnlineHitster/HitsterStart.html" id="name7">Hitster</a></h5>
+          </div>
+          <h6 class="card-subtitle mb-2 text-muted">05/05/2025 - 08/05/2025</h6>
+          <p id="Hitster1">Online version of an alternate variant of the game Hitster.</p>
+          <p id="Hitster2">Used RESTful API from Spotify to get playlists and start songs.</p>
+          <p id="Hitster3">Implemented Spotify's authentication token.</p>
+        </div>
+      </div>
     </div>
-    <div id="Minesweaper" class="projects">
-      <image class="imageJava" src="images/c++.png"></image>
-      <h1 id="name6">Minesweeper</h1>
-      <h3>01/04/2021 - 31/06/2021 </h3>
-      <p id="mine1">Created in C++</p>
-      <p id="mine2">Recreated Minesweeper in QT Creator</p>
+
+    <div class="col-md-6 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-2">
+            <img src="images/java.png" alt="Java Icon" class="mr-2" style="height: 24px;">
+            <h5 class="card-title mb-0" id="name4">Omega Power</h5>
+          </div>
+          <h6 class="card-subtitle mb-2 text-muted">01/02/2022 - 14/05/2022</h6>
+          <p id="Omega1">Android video game built in Android Studio.</p>
+          <p id="Omega2">Designed and developed card-based gameplay interface.</p>
+          <p id="Omega3">Collaborated on game mechanics and balancing.</p>
+          <p id="Omega4">Wrote Java-based AI for player opposition.</p>
+          <p id="Omega5">Created and designed game assets.</p>
+        </div>
+      </div>
     </div>
-</div>
+
+    <div class="col-md-6 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-2">
+            <img src="images/html.png" alt="HTML Icon" class="mr-2" style="height: 24px;">
+            <h5 class="card-title mb-0" id="name1">Shopping Website</h5>
+          </div>
+          <h6 class="card-subtitle mb-2 text-muted">01/09/2022 - 31/12/2022</h6>
+          <p id="shop1">Built using HTML, CSS, JavaScript, AJAX, and XML.</p>
+          <p id="shop2">Designed a mock e-commerce shopping site.</p>
+          <p id="shop3">Included filters, dynamic product listings, and a shopping cart.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-2">
+            <img src="images/java.png" alt="Java Icon" class="mr-2" style="height: 24px;">
+            <h5 class="card-title mb-0" id="name2">Robot Management System</h5>
+          </div>
+          <h6 class="card-subtitle mb-2 text-muted">01/05/2022 - 31/08/2022</h6>
+          <p id="Robo1">Developed using Java and Swing.</p>
+          <p id="Robo2">Created prototypes and final version of client-side app.</p>
+          <p id="Robo3">Managed robot fleets and connected to suppliers.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-2">
+            <img src="images/html.png" alt="HTML Icon" class="mr-2" style="height: 24px;">
+            <h5 class="card-title mb-0" id="name5">Task Manager</h5>
+          </div>
+          <h6 class="card-subtitle mb-2 text-muted">01/05/2022 - 31/08/2022</h6>
+          <p id="Task1">Built using HTML, CSS, JavaScript, PHP, and SQL.</p>
+          <p id="Task2">Created a task manager with database-backed storage.</p>
+          <p id="Task3">Users can register, create tasks, and organize by category.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-2">
+            <img src="images/java.png" alt="Java Icon" class="mr-2" style="height: 24px;">
+            <h5 class="card-title mb-0" id="name3">Clicker Game</h5>
+          </div>
+          <h6 class="card-subtitle mb-2 text-muted">20/11/2021 - 20/12/2021</h6>
+          <p id="click1">Programmed in Java.</p>
+          <p id="click2">Clicker game with upgrades, timers, and point accumulation.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center mb-2">
+            <img src="images/c++.png" alt="C++ Icon" class="mr-2" style="height: 24px;">
+            <h5 class="card-title mb-0" id="name6">Minesweeper</h5>
+          </div>
+          <h6 class="card-subtitle mb-2 text-muted">01/04/2021 - 30/06/2021</h6>
+          <p id="mine1">Built with C++ using Qt Creator.</p>
+          <p id="mine2">Classic Minesweeper recreation with GUI.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
 </body>
 </html>

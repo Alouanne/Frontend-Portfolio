@@ -2,10 +2,10 @@ const access_token = null;
 const playlistDefault = "7HlMVnK4JxBo1TElKjfPP2?pt_success=1";
 let playlistId = playlistDefault;
 let playlistData = null;
-const redirectUri = "https://alouanne.github.io/OnlineHitster/Hitster.html"
+const redirectUri = "https://aleannecamire.com/OnlineHitster/Hitster.html"
 let pickedTracks = null;
 let overallPoints = 0;
-const backendUrl = "http://localhost:8080/auth/spotify";
+const backendUrl = "https://backend-portfolio-a7jj.onrender.com/auth/spotify";
 function allowDrop(event) {
     event.preventDefault();
 }
@@ -164,7 +164,7 @@ async function getPlaylist() {
         return;
     }
 
-    const baseUrl = "http://localhost:8080/getPlaylist";
+    const baseUrl = "https://backend-portfolio-a7jj.onrender.com/getPlaylist";
     const url = `${baseUrl}?playlistId=${encodeURIComponent(getPlaylistIdFromState())}&accessToken=${encodeURIComponent(accessToken)}`;
 
     try {
@@ -244,28 +244,66 @@ function getUniqueRandomIndexes(max, count) {
   }
   return Array.from(indexes);
 }
-async function playSong(event){
-
+async function playSong(event) {
   event.preventDefault();
 
   const clickedCard = event.currentTarget;
-  const clickedId = clickedCard.id; // e.g. "card1"
-
-  const inputId = clickedId.replace("cardImg", "inputCard"); // "inputCard1"
-
+  const clickedId = clickedCard.id;
+  const inputId = clickedId.replace("cardImg", "inputCard");
   const trackUri = document.getElementById(inputId)?.value;
 
-  await fetch('https://api.spotify.com/v1/me/player/play', {
-    method: 'PUT',
-    headers: {
-      Authorization: `Bearer ${accessToken}`,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      uris: [trackUri]
-    })
-  });
+  async function attemptPlay() {
+    return fetch('https://api.spotify.com/v1/me/player/play', {
+      method: 'PUT',
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        uris: [trackUri]
+      })
+    });
+  }
+
+  let response = await attemptPlay();
+
+  if (!response.ok) {
+    const errorData = await response.json();
+	console.log('No active device — trying to transfer to current device');
+
+	// Step 1: Get user's available devices
+	const devicesRes = await fetch('https://api.spotify.com/v1/me/player/devices', {
+		headers: {
+			Authorization: `Bearer ${accessToken}`
+		}
+	});
+
+	const devicesData = await devicesRes.json();
+	const availableDevice = devicesData.devices.find(device => device.is_active || device.type === 'Computer' || device.type === 'Smartphone');
+
+	if (availableDevice) {
+		// Step 2: Transfer playback to that device
+		await fetch('https://api.spotify.com/v1/me/player', {
+			method: 'PUT',
+			headers: {
+				Authorization: `Bearer ${accessToken}`,
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({
+				device_ids: [availableDevice.id],
+				play: false
+			})
+		});
+
+		// Step 3: Retry playing the track
+		await new Promise(r => setTimeout(r, 2000));
+		attemptPlay();
+	} else {
+		alert("No available Spotify device found to transfer playback to.");
+	}
+  }
 }
+
 window.onload = () => {
   const params = new URLSearchParams(window.location.search);
 	getPlaylistIdFromState();

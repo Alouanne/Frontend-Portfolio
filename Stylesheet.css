@@ -26,7 +26,7 @@ header {
   body{
       padding-top:90px;
   }
-  
+
   .InfoCenter{
       text-align:left;
   }
@@ -49,11 +49,11 @@ header {
   max-width:100%;
     margin: auto;
   }
-  
+
   a{
     text-decoration: none;
   }
-  
+
   #name{
    font-family: "Lucida Console", cursive;
    font-size: 24px;
@@ -63,7 +63,7 @@ header {
     border: 1px solid black;
     padding: 10px;
     margin-bottom: 15px;
-  
+
   }
   .HomePage{
       width: 75%;
@@ -105,7 +105,7 @@ header {
     text-align: center;
     width: 50%;
     margin-bottom: 6px;
-  
+
   }
   ul {
     list-style-type: none;
@@ -117,11 +117,11 @@ header {
     list-style-type:disc ;
     margin: 10px;
     font-size: 12px;
-  
+
   }
   .Skills{
       font-size: 20px;
-  
+
   }
 
 .HitsterStart, .UniquePlaylistWarning{
@@ -277,3 +277,199 @@ header {
     border-color: #ccc;
     cursor: not-allowed;
   }
+
+  body {
+      padding-top: 90px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .navbar-brand {
+      font-family: "Lucida Console", monospace;
+      font-size: 24px;
+  }
+
+  .imageLogo {
+      height: 24px;
+      width: auto;
+  }
+
+  #Introduction {
+      font-size: 1.1rem;
+      line-height: 1.6;
+  }
+
+  a {
+      text-decoration: none;
+      color: #007bff;
+  }
+
+  a:hover {
+      text-decoration: underline;
+      color: #0056b3;
+  }
+
+#EducationDiv > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.ImageEdu {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 10px;
+  object-fit: contain;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 5px;
+}
+
+@media (max-width: 768px) {
+  #EducationDiv > div {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ImageEdu {
+    margin: 0 0 15px 0;
+  }
+}
+/* === General Cleanup === */
+body {
+  padding-top: 90px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fafafa;
+}
+
+/* === Skill Section Styling === */
+#SkillDiv {
+  max-width: 800px;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+#skillintro {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.skill-category h2 {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #007bff;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+.Skills {
+  font-size: 1rem;
+  padding: 0.3rem 0;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+  #SkillDiv {
+    width: 90%;
+    padding: 1.2rem;
+  }
+
+  .skill-category h2 {
+    font-size: 1.2rem;
+  }
+
+  .Skills {
+    font-size: 0.95rem;
+  }
+}
+/* Container for all jobs */
+.jobs {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Each individual job block */
+.jobs > div.job-entry {
+  margin-bottom: 1.8rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid #eee;
+}
+
+/* Remove border for last job */
+.jobs > div.job-entry:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Job title and company */
+.job-entry h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 0.2rem;
+}
+
+.job-entry .company {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+/* Dates */
+.job-entry .dates {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #888;
+  margin-bottom: 0.8rem;
+}
+
+/* Job description / tasks */
+.job-entry ul.tasks {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.job-entry ul.tasks li {
+  margin-bottom: 0.4rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .jobs {
+    padding: 1rem 1.2rem;
+    width: 90%;
+  }
+
+  .job-entry h3 {
+    font-size: 1.15rem;
+  }
+
+  .job-entry .company {
+    font-size: 1rem;
+  }
+
+  .job-entry ul.tasks {
+    font-size: 0.95rem;
+  }
+}

@@ -1,7 +1,7 @@
 const playlistDefault = "3Pft9VkD2PXIK9EPOlVo9Z?si=0cdd96fdf68e4821";
 let playlistId = playlistDefault;
 
-const backendUrl = "http://localhost:8080/auth/spotify";
+const backendUrl = "https://backend-portfolio-a7jj.onrender.com/auth/spotify";
 
 
 
