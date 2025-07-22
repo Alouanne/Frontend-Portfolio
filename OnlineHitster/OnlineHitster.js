@@ -204,7 +204,6 @@ async function getSongs() {
 		return;
 	}
 	let uniqueIndexes = getUniqueRandomIndexes(playlist.length, 5);
-	console.log(uniqueIndexes)
 	pickedTracks = uniqueIndexes.map((index, i) => {
 		const trackItem = playlist[index].track;
 		return {
@@ -221,7 +220,6 @@ async function getSongs() {
 		li.textContent = `${track.number}. ${track.name} - ${track.artist} (Released: ${track.releaseDate})`;
 	});
 
-	console.log("Selected songs (in order):");
 	pickedTracks.forEach(track => {
 		const input = document.getElementById(`inputCard${track.number}`);
 		const year = document.getElementById(`inputYear${track.number}`);
@@ -232,7 +230,6 @@ async function getSongs() {
 		if (input) {
 				input.value = track.uri;
 		}
-		console.log(`${track.number}. ${track.name} - ${track.artist} (Released: ${track.releaseDate})`);
 	});
 	  document.querySelector(".loadingScreen").style.display = 'none';
 };
